@@ -1,7 +1,7 @@
 <template>
-  <div class="flex">
-    <NavigationComponent class="w-75" />
-    <Home />
+  <div class="flex flex-auto">
+    <NavigationComponent />
+    <Home class="bg-gray-100"/>
   </div>
 </template>
 

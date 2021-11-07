@@ -1,8 +1,8 @@
 <template>
 <v-card
     :loading="loading"
-    class="mx-auto my-12"
-    max-width="374"
+    class="mx-auto"
+    max-width="350"
   >
     <v-img
       height="125"

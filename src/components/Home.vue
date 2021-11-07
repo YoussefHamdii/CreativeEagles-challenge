@@ -1,17 +1,25 @@
 <template>
-  <div class="flex">
+  <div class="pl-10">
+  <UserComponent class="pt-5" />
+  <CategoryComponent class="py-5"/>
+  <div class="flex flex-initial">
     <CardComponent v-for="item in deals" :key="item" :item="item"/>
+  </div>
   </div>
 </template>
 
 <script>
 import CardComponent from './CardComponent.vue';
+import CategoryComponent from './CategoryComponent.vue';
+import UserComponent from './UserComponent.vue';
 import axios from 'axios';
 
   export default {
     name: 'HelloWorld',
     components: {
       CardComponent,
+      CategoryComponent,
+      UserComponent,
     },
     data(){
       return{
