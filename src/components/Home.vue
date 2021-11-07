@@ -1,6 +1,5 @@
 <template>
   <div class="flex">
-    <p>HOME page</p>
     <CardComponent />
     <CardComponent />
     <CardComponent /> 
