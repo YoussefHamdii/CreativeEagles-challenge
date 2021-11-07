@@ -38,7 +38,7 @@
       
     </v-card-text>
 
-    <v-divider class=""></v-divider>
+    <v-divider></v-divider>
     <div class="flex">
 
       <div class="w-50 text-center">
