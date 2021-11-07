@@ -1,5 +1,5 @@
 <template>
-  <div class="pl-10">
+  <div class="pl-10 w-400">
   <UserComponent class="pt-5" />
   <CategoryComponent class="py-5"/>
   <div class="flex flex-initial">
