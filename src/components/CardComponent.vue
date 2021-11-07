@@ -4,27 +4,26 @@
     class="mx-auto my-12"
     max-width="374"
   >
-
     <v-img
       height="125"
-      src="https://cdn.vuetifyjs.com/images/cards/cooking.png"
+      :src="item.banner"
     ></v-img>
 
     <div class="my-2 mx-3.5 text-sm py-0.5 text-white bg-cyan-900 w-25 text-center rounded-md">2 Days left </div>
 
-    <v-card-title class="text-cyan-900 font-mono font-bold py-0">Cafe Badilico</v-card-title>
+    <v-card-title class="text-cyan-900 font-mono font-bold py-0">{{item.title}}</v-card-title>
     
     <v-card-text class="font-mono text-sm font-bold py-0">
       <div class="text-cyan-900">
-         <span class=" text-lg text-lime-500 align-middle">25%</span>
-          12345676543 left to fund
+         <span class=" text-lg text-lime-500 align-middle">{{Math.round(item.current_investment/item.investment_goal*100)}}%</span>
+          {{item.investment_goal - item.current_investment}} € left to fund
       </div>
       </v-card-text>
       
-    <progress value="25" max="100" class="h-1 mx-4 wid"></progress>
+    <progress :value="item.current_investment/item.investment_goal*100" max="100" class="h-1 mx-4 wid"></progress>
 
     <v-card-text class="py-0 font-mono text-sm font-medium">
-      <div class="text-cyan-900">Small plates, salads & sandwiches - an intimate setting with 12 indoor seats plus patio seating.</div>
+      <div class="text-cyan-900">{{item.teaser}}</div>
     </v-card-text>
 
     <v-card-text>
@@ -43,7 +42,7 @@
     <div class="flex">
 
       <div class="w-50 text-center">
-        <v-card-text class="py-0 pt-4 text-lg font-medium text-cyan-900">52</v-card-text>
+        <v-card-text class="py-0 pt-4 text-lg font-medium text-cyan-900">{{item.investor_count}}</v-card-text>
         <v-card-text class="py-0 pb-4 text-cyan-700">Want to invest</v-card-text>
       </div>
 
@@ -53,7 +52,7 @@
       ></v-divider>
 
       <div class="w-50 text-center">
-        <v-card-text class="py-0 pt-4 text-lg font-medium text-cyan-900">2,000,000$</v-card-text>
+        <v-card-text class="py-0 pt-4 text-lg font-medium text-cyan-900">{{item.current_investment}} €</v-card-text>
         <v-card-text class="py-0 pb-4 text-cyan-700">Funding Round</v-card-text>
       </div>
 
@@ -72,6 +71,7 @@
 //import vuetify from 'vuetify';
 export default {
     name: "CardComponent",
+    props:['item'],
 }
 </script>
 
