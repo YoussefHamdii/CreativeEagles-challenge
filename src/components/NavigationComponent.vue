@@ -2,36 +2,36 @@
     <div>
         <img src="../assets/logo.png" class="w-45 m-5" />
         <ul>
-            <li class="py-3 w-75 pl-10" :class="hover ? 'bg-cyan-900 text-white':'text-cyan-900'">
-                <button @mouseover="hover=true" @mouseleave="hover=false">
+            <li class="py-3 w-75 pl-10" :class="hover ? selected==1?'bg-cyan-900 text-white': 'bg-gray-200 text-cyan-900': selected == 1 ? 'bg-cyan-900 text-white':'text-cyan-900'">
+                <button @mouseover="hover=true" @mouseleave="hover=false" @click="selected = 1">
                     <img src="../assets/Cockpit.png" class="inline mr-5"/>Cockpit
                 </button>
             </li>
-            <li class="py-3 text-white bg-cyan-900 w-75 pl-10">
-                <button>
+            <li class="py-3 w-75 pl-10" :class="hover1 ? selected==2?'bg-cyan-900 text-white': 'bg-gray-200 text-cyan-900': selected == 2 ? 'bg-cyan-900 text-white':'text-cyan-900'">
+                <button @mouseover="hover1=true" @mouseleave="hover1=false" @click="selected = 2">
                     <img src="../assets/Star.png" class="inline mr-5"/>Investment Opportunities
                 </button>
             </li>
-            <li class="py-3 w-75 pl-10" :class="hover2 ? 'bg-cyan-900 text-white':'text-cyan-900'">
-                <button @mouseover="hover2=true" @mouseleave="hover2=false">
+            <li class="py-3 w-75 pl-10" :class="hover2 ? selected==3?'bg-cyan-900 text-white': 'bg-gray-200 text-cyan-900': selected == 3 ? 'bg-cyan-900 text-white':'text-cyan-900'">
+                <button @mouseover="hover2=true" @mouseleave="hover2=false" @click="selected = 3">
                     <img src="../assets/Rocket.png" class="inline mr-5"/>My investments
                 </button>
             </li>
         </ul>
         <hr class="w-65 ml-7 border-t-2 border-gray-300" />
         <ul>
-            <li class="py-3 w-75 pl-10" :class="hover3 ? 'bg-cyan-900 text-white':'text-cyan-900'">
-                <button @mouseover="hover3=true" @mouseleave="hover3=false">
+            <li class="py-3 w-75 pl-10" :class="hover3 ? selected==4?'bg-cyan-900 text-white': 'bg-gray-200 text-cyan-900': selected == 4 ? 'bg-cyan-900 text-white':'text-cyan-900'">
+                <button @mouseover="hover3=true" @mouseleave="hover3=false" @click="selected = 4">
                     <img src="../assets/Book.png" class="inline mr-5"/>Knowledge Center
                 </button>
             </li>
-            <li class="py-3 w-75 pl-10" :class="hover4 ? 'bg-cyan-900 text-white':'text-cyan-900'">
-                <button @mouseover="hover4=true" @mouseleave="hover4=false">
+            <li class="py-3 w-75 pl-10" :class="hover4 ? selected==5?'bg-cyan-900 text-white': 'bg-gray-200 text-cyan-900': selected == 5 ? 'bg-cyan-900 text-white':'text-cyan-900'">
+                <button @mouseover="hover4=true" @mouseleave="hover4=false" @click="selected = 5">
                     <img src="../assets/Crown.png" class="inline mr-5"/>Venture Pool
                 </button>
             </li>
-            <li class="py-3 w-75 pl-10" :class="hover5 ? 'bg-cyan-900 text-white':'text-cyan-900'">
-                <button @mouseover="hover5=true" @mouseleave="hover5=false">
+            <li class="py-3 w-75 pl-10" :class="hover5 ? selected==6?'bg-cyan-900 text-white': 'bg-gray-200 text-cyan-900': selected == 6 ? 'bg-cyan-900 text-white':'text-cyan-900'">
+                <button @mouseover="hover5=true" @mouseleave="hover5=false" @click="selected = 6">
                     <img src="../assets/Newsletter.png" class="inline mr-5"/>Fee Model
                 </button>
             </li>
@@ -64,7 +64,29 @@ export default {
             hover3: false,
             hover4: false,
             hover5: false,
+            selected: 2
         };
     }
 }
 </script>
+
+<style scoped>
+
+.wid{
+  width: 100%;
+}
+button {
+    border: none;
+}
+
+button:focus {
+    border: none;
+    outline: none;
+}
+
+button:focus{
+    outline:none;
+}
+
+</style>
+
