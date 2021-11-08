@@ -1,4 +1,5 @@
-# asignment-ce2
+# asignment for Creative Eagles
+# after cloning this repo run the following commands in cmd from project folder
 
 ## Project setup
 ```
@@ -19,6 +20,3 @@ npm run build
 ```
 npm run lint
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
