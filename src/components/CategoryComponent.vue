@@ -1,7 +1,7 @@
 <template>
     <div>
         <ul class="flex border-b-2 ">
-            <li class="pr-7 pb-3" @click="selected=1" :class="selected == 1?' border-b-2 border-black':''">
+            <li class="pr-7 pl-5 pb-3" @click="selected=1" :class="selected == 1?' border-b-2 border-black':''">
                 <button>
                     All
                 </button>

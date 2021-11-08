@@ -4,17 +4,17 @@
         <ul>
             <li class="py-3 w-75 pl-10" :class="hover ? selected==1?'bg-cyan-900 text-white': 'bg-gray-200 text-cyan-900': selected == 1 ? 'bg-cyan-900 text-white':'text-cyan-900'">
                 <button @mouseover="hover=true" @mouseleave="hover=false" @click="selected = 1">
-                    <img src="../assets/Cockpit.png" class="inline mr-5"/>Cockpit
+                    <img src="../assets/Cockpit.png" class="inline mr-5" :class="selected==1?'sv-w':''"/>Cockpit
                 </button>
             </li>
             <li class="py-3 w-75 pl-10" :class="hover1 ? selected==2?'bg-cyan-900 text-white': 'bg-gray-200 text-cyan-900': selected == 2 ? 'bg-cyan-900 text-white':'text-cyan-900'">
                 <button @mouseover="hover1=true" @mouseleave="hover1=false" @click="selected = 2">
-                    <img src="../assets/Star.png" class="inline mr-5"/>Investment Opportunities
+                    <img src="../assets/Star.png" class="inline mr-5" :class="selected==2?'sv-w':''"/>Investment Opportunities
                 </button>
             </li>
             <li class="py-3 w-75 pl-10" :class="hover2 ? selected==3?'bg-cyan-900 text-white': 'bg-gray-200 text-cyan-900': selected == 3 ? 'bg-cyan-900 text-white':'text-cyan-900'">
                 <button @mouseover="hover2=true" @mouseleave="hover2=false" @click="selected = 3">
-                    <img src="../assets/Rocket.png" class="inline mr-5"/>My investments
+                    <img src="../assets/Rocket.png" class="inline mr-5" :class="selected==3?'sv-w':''"/>My investments
                 </button>
             </li>
         </ul>
@@ -22,17 +22,17 @@
         <ul>
             <li class="py-3 w-75 pl-10" :class="hover3 ? selected==4?'bg-cyan-900 text-white': 'bg-gray-200 text-cyan-900': selected == 4 ? 'bg-cyan-900 text-white':'text-cyan-900'">
                 <button @mouseover="hover3=true" @mouseleave="hover3=false" @click="selected = 4">
-                    <img src="../assets/Book.png" class="inline mr-5"/>Knowledge Center
+                    <img src="../assets/Book.png" class="inline mr-5" :class="selected==4?'sv-w':''"/>Knowledge Center
                 </button>
             </li>
             <li class="py-3 w-75 pl-10" :class="hover4 ? selected==5?'bg-cyan-900 text-white': 'bg-gray-200 text-cyan-900': selected == 5 ? 'bg-cyan-900 text-white':'text-cyan-900'">
                 <button @mouseover="hover4=true" @mouseleave="hover4=false" @click="selected = 5">
-                    <img src="../assets/Crown.png" class="inline mr-5"/>Venture Pool
+                    <img src="../assets/Crown.svg" class="inline mr-5" :class="selected==5?'sv-w':''"/>Venture Pool
                 </button>
             </li>
             <li class="py-3 w-75 pl-10" :class="hover5 ? selected==6?'bg-cyan-900 text-white': 'bg-gray-200 text-cyan-900': selected == 6 ? 'bg-cyan-900 text-white':'text-cyan-900'">
                 <button @mouseover="hover5=true" @mouseleave="hover5=false" @click="selected = 6">
-                    <img src="../assets/Newsletter.png" class="inline mr-5"/>Fee Model
+                    <img src="../assets/Newsletter.png" class="inline mr-5" :class="selected==6?'sv-w':''"/>Fee Model
                 </button>
             </li>
         </ul>
@@ -86,6 +86,9 @@ button:focus {
 
 button:focus{
     outline:none;
+}
+.sv-w{
+        filter: brightness(0) invert(1);
 }
 
 </style>
