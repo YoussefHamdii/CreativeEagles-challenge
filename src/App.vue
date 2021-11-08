@@ -19,3 +19,23 @@ export default {
   }
 };
 </script>
+
+<style>
+/* global styles */
+.wid{
+  width: 100%;
+}
+button {
+    border: none;
+}
+
+button:focus {
+    border: none;
+    outline: none;
+}
+
+button:focus{
+    outline:none;
+}
+
+</style>
